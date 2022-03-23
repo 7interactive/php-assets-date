@@ -1,0 +1,21 @@
+{
+    "name": "7interactive/php-assets-date",
+    "description": "Contains all possible date and time related classes for internal development.",
+    "type": "library",
+    "require": {
+        "php": ">=8.0",
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "janondracek1",
+            "email": "jan.ondracek1@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
