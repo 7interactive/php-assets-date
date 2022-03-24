@@ -13,7 +13,7 @@ use SevenInteractive\Model\Repository\DayRepository;
 abstract class DayApiHelper
 {
 
-    public const BASE_API_URL = 'http://host.docker.internal:9130/api';
+    public const BASE_API_URL = 'https://assets-7rs.cz/api';
     public const ENDPOINT_ALL_DAYS = '/days';
     public const ENDPOINT_NAME_DAYS = '/days/name-days';
     public const ENDPOINT_PUBLIC_HOLIDAYS = '/days/public-holidays';
