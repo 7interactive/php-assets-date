@@ -7,7 +7,7 @@ namespace SevenInteractive\Model\Repository;
 use Doctrine\ORM\EntityRepository;
 use SevenInteractive\Model\Entity\Day;
 
-abstract class DayRepository extends EntityRepository
+abstract class DayRepository extends BaseRepository
 {
 
     /**

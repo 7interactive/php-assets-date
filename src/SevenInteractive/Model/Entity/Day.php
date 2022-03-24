@@ -10,7 +10,7 @@ use SevenInteractive\Model\Traits\IdTrait;
 /**
  * @ORM\Entity(repositoryClass="SevenInteractive\Model\Repository\DayRepository")
  */
-abstract class Day
+abstract class Day extends BaseEntity
 {
 
     use IdTrait;
