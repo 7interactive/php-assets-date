@@ -4,7 +4,8 @@
     "type": "library",
     "require": {
         "php": ">=7.3",
-        "7interactive/7rs-base-model": "^1.0"
+        "7interactive/7rs-base-model": "^1.0",
+        "guzzlehttp/guzzle": "^7.4"
     },
     "require-dev": {
         "nettrine/orm": "^0.8.1",

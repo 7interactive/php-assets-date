@@ -13,7 +13,7 @@ abstract class DayRepository extends BaseAssetRepository
     /**
      * @return Day[]
      */
-    public function findForDay(\DateTime $dateTime): array
+    public function findForDay(\DateTime $dateTime, string $name = null): array
     {
         $midnight = clone $dateTime;
         $midnight->setTime(0, 0);
@@ -29,6 +29,14 @@ abstract class DayRepository extends BaseAssetRepository
                 'secondBeforeMidnightNextDay' => $secondBeforeMidnightNextDay
             ])
             ->orderBy('d.name ACS');
+
+        if($name !== null){
+            $qb
+                ->andWhere('d.name = :name')
+                ->setParameters([
+                'name' => $name
+            ]);
+        }
 
         return $qb->getQuery()->getResult();
     }
