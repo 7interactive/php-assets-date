@@ -5,6 +5,11 @@
     "require": {
         "php": ">=8.0"
     },
+    "require-dev": {
+        "nettrine/orm": "^0.8.1",
+        "nettrine/dbal": "^0.7.0",
+        "nettrine/annotations": "^0.7.0"
+    },
     "autoload": {
         "classmap": [
             "src/"
