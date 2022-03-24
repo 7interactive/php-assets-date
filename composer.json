@@ -3,7 +3,7 @@
     "description": "Contains all possible date and time related classes for internal development.",
     "type": "library",
     "require": {
-        "php": ">=8.0"
+        "php": ">=7.3"
     },
     "require-dev": {
         "nettrine/orm": "^0.8.1",
