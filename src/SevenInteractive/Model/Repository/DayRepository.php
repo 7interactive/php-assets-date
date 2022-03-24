@@ -28,7 +28,7 @@ abstract class DayRepository extends BaseAssetRepository
                 'midnight' => $midnight,
                 'secondBeforeMidnightNextDay' => $secondBeforeMidnightNextDay
             ])
-            ->orderBy('d.name ASC');
+            ->orderBy('d.name', 'ASC');
 
         if($name !== null){
             $qb
