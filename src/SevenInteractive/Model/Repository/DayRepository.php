@@ -7,7 +7,7 @@ namespace SevenInteractive\Model\Repository;
 use Doctrine\ORM\EntityRepository;
 use SevenInteractive\Model\Entity\Day;
 
-abstract class DayRepository extends BaseRepository
+abstract class DayRepository extends BaseAssetRepository
 {
 
     /**
@@ -22,7 +22,7 @@ abstract class DayRepository extends BaseRepository
 
         $qb = $this->getEntityManager()->createQueryBuilder()
             ->select('d')
-            ->from(Day::class, 'd')
+            ->from($this->getChildClassName(), 'd')
             ->where('d.date BETWEEN :midnight AND :secondBeforeMidnightNextDay')
             ->setParameters([
                 'midnight' => $midnight,
