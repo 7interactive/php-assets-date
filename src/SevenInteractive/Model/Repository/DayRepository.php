@@ -24,19 +24,20 @@ abstract class DayRepository extends BaseAssetRepository
             ->select('d')
             ->from($this->getChildClassName(), 'd')
             ->where('d.date BETWEEN :midnight AND :secondBeforeMidnightNextDay')
-            ->setParameters([
-                'midnight' => $midnight,
-                'secondBeforeMidnightNextDay' => $secondBeforeMidnightNextDay
-            ])
             ->orderBy('d.name', 'ASC');
+
+        $parameters = [
+            'midnight' => $midnight,
+            'secondBeforeMidnightNextDay' => $secondBeforeMidnightNextDay
+        ];
 
         if($name !== null){
             $qb
-                ->andWhere('d.name = :name')
-                ->setParameters([
-                'name' => $name
-            ]);
+                ->andWhere('d.name = :name');
+
+            $parameters['name'] = $name;
         }
+        $qb->setParameters($parameters);
 
         return $qb->getQuery()->getResult();
     }
