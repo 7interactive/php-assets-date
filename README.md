@@ -1,33 +1,16 @@
-# PHP Office Helper
+# PHP Assets Date
 
-This package implements `phpoffice/phpspreadsheet`.
+This package implements common model classes for the use of 7RS Assets API.
 
 ## Usage
-Implement new document class, extending `BaseDocument` or `BaseExcelDocument`, just like in `example` folder.
+Implement new entity class, extending `Day`.
 
-Implement new document helper class, which extends `DocumentHelper` and introduce a new method inside of it, just like below.
-```php
-/**
- * Returns filename
- *
- * @param \DateTime $from
- * @param \DateTime $to
- * @return string
- */
-public function createExcelSpreadsheetActivityLog(\DateTime $from, \DateTime $to): string
-{
-    /** @var ExampleSpreadsheet $document */
-    $document = $this->documentFactory->createByClassName(ExampleSpreadsheet::class);
-    $document->setRange($from, $to);
-    return $this->documentFactory->save($document);
-}
-```
+Implement repository, which extends `DayRepository` and introduce a new method inside of it, just like below.
 
 ## Installing
 
-`$ composer require 7interactive/php-office-helper`
+`$ composer require 7interactive/php-assets-date`
 
 
 ## License
-
 MIT
